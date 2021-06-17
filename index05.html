@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>05 - {결승}점</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon5.ico">
+	<style type="text/css">
+		body, html, div, section, footer{margin: 0; }
+		body{margin: 0;
+				-ms-overflow-style: none;
+			cursor: url(cursor5.cur), auto;
+			overflow: hidden;}
+		::-webkit-scrollbar {display: none; }
+		nav{font-family: 'Kumbh Sans', sans-serif;
+			font-size: 1.5em;
+			font-weight: 400;
+			word-spacing: -1px;
+			line-height: -30px;
+			letter-spacing: -1px;
+			z-index: 35;background:none; width: 10px;
+			height: 10px; }
+		nav .ml{margin-left: 10px;}
+		.ml{margin-left: 20px;}
+  		/*.cursor{background: url(topic1icon.png);
+      			width: 3rem;
+      			height: 3rem;
+      			position: absolute;
+      			z-index: 1000;
+      			transform: translate(-50%, -50%);
+      			pointer-events: none;
+      			transition: all 0.3s ease;
+      			transition-property: background, transform;
+      			transform-origin: 100% 100%;
+      			background-size: cover;}*/
+		section{width: 100vw; height: 100vh; background: #E6E6E6;}
+		img{display: block;width: 100%;}
+		@font-face{font-family: "SMtae-R";
+					src:local(※), url(SMtae-R.otf)format("opentype");}
+		@font-face{font-family: "SDNeoR";
+					src:local(※), url(SDNeoR.ttf)format("truetype");}
+		@font-face{font-family: "SDNeoUL";
+					src:local(※), url(SDNeoUL.ttf)format("truetype");}
+		@font-face{font-family: "SDNeoB";
+					src:local(※), url(SDNeoB.ttf)format("truetype");}
+		.grid{display: grid;
+				grid-template-rows: 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh;
+				grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+				grid-gap: 0px 30px;}
+		a{grid-area: 1 / 1 / 3 / 3 ;
+			display: inline-block;
+			width: 40px; height: 40px;
+			margin-top: 30px;
+			background: #46E063;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			border-radius: 20px;
+			z-index: 100;
+			animation: scale 3s infinite linear;}
+
+		@keyframes scale {
+  		0%   { transform: scale(1); }
+  		50% { transform: scale(1.3); }
+  		100% { transform: scale(1); }}
+
+  		a:hover{background:black;
+            transition: all 0.2s;}
+		
+		/*#back{grid-area: 1 / 1 / 3 / 3 ;
+			display: inline-block;
+			width: 40px; height: 40px;
+			margin-top: 30px;opacity: 0; color: black; text-decoration: none;}
+		#back:hover{opacity: 1; color: black;
+			left:20px; transition: all 0.3s;}*/
+
+
+		.absolute{display: block;position: absolute;}
+		.a{grid-area: 1 / 1 / 9 / 1 ; background:#46E063;z-index:30;
+			}
+		.b{grid-area: 1 / 7 / 9 / 12 ; background:#46E063;z-index:40;}
+		.ccc {display: flex;
+    			position: absolute;
+    			top: 0;
+    			left: 0;
+    			align-items: left;
+    			background: none;
+    			justify-content: flex-start;
+    			width: 100%;
+    			height: 100%;
+    			white-space: nowrap;
+    			overflow: hidden;
+    			transform: rotate(-90deg) scale(2);
+    			transition: all 1s ease;}
+    	.cccard{font-family: 'Kumbh Sans', sans-serif;
+			font-size: 1em;
+			font-weight: 300;
+			word-spacing: -1px;
+			letter-spacing: 0px;
+			z-index: 35;
+			}
+    	.ccc div {display: flex;
+     			 animation: scrollText 10s infinite linear;}
+     	@keyframes scrollText {
+  from   { transform: translateX(0%); }
+  to { transform: translateX(-115%); }
+}
+		/*.pl{position: relative; overflow: hidden;}
+		section .scroll{width: 100%; display: flex;}
+		section .scroll div{background: none;
+							font-family: 'Kumbh Sans', sans-serif;
+							font-size: 2em;
+							font-weight: 300;
+							word-spacing: -2px;
+							letter-spacing: -1px;
+							white-space: nowrap;
+							text-transform: uppercase;
+							z-index: 35;
+							animation: animate 40s linear infinite;
+								animation-delay: -40s;}
+		section .scroll div:nth-child(2)
+							{animation: animate2 40s linear infinite;
+							animation-delay: -20s;}
+		section .scroll div span{margin-right: 20px;}
+		section .scroll.text1{transform: rotate(-90deg);}
+		@keyframes animate{0% {transform: translateX(100%);}
+							100% {transform: translateX(-100%);}}
+		@keyframes animate2{0% {transform: translateX(0%);}
+							100% {transform: translateX(-200%);}}*/
+
+		.topic{grid-area: 1 / 3 / 4 / 7 ;
+				font-family: 'SMtae-R';
+			font-size: 7.5em;
+			text-align: right;
+			padding-top:20px;
+			z-index:50;}
+		.ocard{background: none;
+			font-family: 'Kumbh Sans', sans-serif;
+			transform: rotate(180deg);
+			writing-mode: vertical-rl;
+			font-size: 2em;
+			font-weight: 300;
+			word-spacing: -2px;
+			letter-spacing: -1px;
+			z-index: 35;
+			display: block;
+			white-space: nowrap;
+  			overflow: hidden;}
+  		.deg{transform: rotate(-90deg);
+  			height: 30px;
+  			display: block;}
+  		.card{font-family: 'Kumbh Sans', sans-serif;
+			font-size: 2em;
+			font-weight: 300;
+			word-spacing: -2px;
+			letter-spacing: -1px;
+			z-index: 35;}
+		.span{margin-left: 20px;}
+		.frontdef{font-family: 'SDNeoB';
+					font-size: 1.2em;}
+		.def{grid-area: 5 / 2 / 8 / 6 ;
+			font-family: 'SDNeoR';
+			font-size: 1.1em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 180%;
+			padding-top:0px;
+			z-index:50;}
+		/*.target { display: inline-block;
+					white-space: nowrap;
+					overflow: hidden;}*/
+		.small1 { width: 600px;}
+		.small2 { width: 300px;}
+		.small3 { width: 650px;}
+		.topic1circle{grid-area: 1 / 3 / 6 / 7;
+						z-index:0;}
+		.topic1line{grid-area: 5 / 1 / 9 / 5;
+					padding-left:50px;
+					padding-top:55px;
+					z-index:1;}
+		.topic1hott{grid-area: 2 / 7 / 6 / 12;
+					margin: 0px auto;
+					z-index:60;
+				-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no1{grid-area: 2 / 8 / 5 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top:75px;
+			padding-left: 50px;
+			padding-right: 0px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no2{grid-area: 3 / 7 / 5 / 9;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top:15px;
+			padding-left: 20px;
+			padding-right: 50px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no3{grid-area: 4 / 10 / 6 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top:30px;
+			padding-left: 35px;
+			padding-right: 10px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no4{grid-area: 5 / 8 / 7 / 10;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 30px;
+			padding-left: 20px;
+			padding-right: 0px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no5{grid-area: 7 / 8 / 9 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 80px;
+			padding-left: 50px;
+			padding-right:20px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no6{grid-area: 5 / 10 / 7 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 60px;
+			padding-left: 40px;
+			padding-right:20px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no7{grid-area: 7 / 7 / 9 / 10;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 70px;
+			padding-left: 40px;
+			padding-right:10px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.circle1{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle2{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle3{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle4{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle5{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle6{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle7{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle8{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle9{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle10{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		#drag{cursor: move;}
+		/*.pointer{position: absolute;
+				top: 0; left: 0;
+				width: 120px; height: 80px;
+				margin: 0px auto;
+				background: url(topic1icon.png);
+				background-repeat: no-repeat;
+				transform: translate(-50%, -50%);
+				background-size: 45px;
+				background-position: center;
+				z-index: 1000}*/
+	</style>
+</head>
+<body>
+	<section class="grid">
+		<div class="a">
+			<div class="ccc cccard">
+				<div class="span">05 - ATHLETICS - {Finish Line/Winning Run/Goal}Point ; A Line Marking The End of A Race&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				</div>
+				<div class="span">05 - ATHLETICS - {Finish Line/Winning Run/Goal}Point ; A Line Marking The End of A Race&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				</div>
+				<div class="span">05 - ATHLETICS - {Finish Line/Winning Run/Goal}Point ; A Line Marking The End of A Race&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				</div>
+			</div>
+		</div>
+		<nav>
+		<div class="grid">
+			<a href="index.html"></a>
+		</div>
+	</nav>
+		<div class="topic">{결승}점</div>
+		<img src="topic5circle.png" class="topic1circle small1"></div>
+		<div class="def"><font class="frontdef">육상·수영 등에서 승부가 결정되는 지점<br>승부를 결정짓는 점수</font><br>
+				승부를 판정하기 위한 기준점을 가리킨다. 육상 경기에서 {결승}점은 트랙 안쪽에서부터 직각으로 그어진 폭 5㎝의 흰 선으로 경기자의 순위 판정을 위한 것이다. 스타트 라인에 가까운 쪽이 기준이 되므로 선의 폭은 정해진 거리의 바깥쪽이 되어야 한다. 경주자의 순위는 이 선을 포함한 연직 평면에 동체가 먼저 도달한 순위에 따라 정해진다.<br>{결승}점은 야구 경기에서 똑같이 무득점이거나 혹은 동점이었다가 올린, 경기를 승리로 이끄는 득점을 뜻한다.</div>
+		<div class="b"></div>
+		<img src="topic5hott.png" class="topic1hott small3"></div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<div class="no1">1. {&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}점 위에 설치하는 {&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}테이프는 보조적 장치일 뿐 도착 순서를 결정하는 역할은 아니다.</div>
+		<div class="no2">2. 올림픽 중 코로나19에 확진되어 {&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} 경기를 못 뛰게 되면 은메달을 받는다.</div>
+		<div class="no3">3. 쇼트트랙 경기에서 발을 들이미는 이유는 스케이트 날 앞부분이 {&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}점을 통과하는 순간 골인 기록으로 인정되기 때문이다.</div>
+		<div class="no4">4. 단거리 달리기를 할 땐 {&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}점에 육박하면 상체를 앞으로 기울이며 달리던 속도 그대로 골인하는 것이 좋다.</div>
+		<div class="no5">5. 2002년 한국과 독일의 월드컵 준{&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}전 당시 거리 응원을 하러 700만명이 모였다.</div>
+		
+		<div class="circle1 absolute drag" style="top: 20px; left: 1270px;"></div>
+		<div class="circle2 absolute drag" style="top: 140px; left: 900px;"></div>
+		<div class="circle3 absolute drag" style="top: 150px; left: 1300px;"></div>
+		<div class="circle4 absolute drag" style="top: 195px; left: 1140px;"></div>
+		<div class="circle5 absolute drag" style="top: 420px; left: 1000px;"></div>
+		<div class="circle6 absolute drag" style="top: 330px; left: 900px;"></div>
+		<div class="circle7 absolute drag" style="top: 400px; left: 1260px;"></div>
+		<div class="circle8 absolute drag" style="top: 370px; left: 1400px;"></div>
+		<div class="circle9 absolute drag" style="top: 630px; left: 1180px;"></div>
+		<div class="circle10 absolute drag" style="top: 610px; left: 1070px;"></div>
+		<div class="pointer"></div>
+		<script>
+        const pointer = document.querySelector(".pointer");
+
+        document.addEventListener("mousemove", (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            pointer.style.left = mouseX + 'px';
+            pointer.style.top = mouseY + 'px';
+        });
+        document.addEventListener("mousemove", (e) => {
+    console.log(e.clientX);
+    console.log(e.clientY);
+});
+</script>
+
+<script type="text/javascript">
+        (function(){
+		var d = false;
+		var target,cx,cy,lx,ly;
+		var t = document.getElementsByClassName("drag");
+		for(var i=0; i<t.length; i++){
+			t[i].style.display = "block";
+			t[i].style.position = "absolute";
+			t[i].style.cursor = "pointer";
+			t[i].ondragstart = function(e){e.preventDefault();};
+			t[i].onmousedown = function(e){ d = true; target = e.target;
+				cx = e.clientX; cy = e.clientY;
+				lx=parseInt(e.target.style.left);
+				ly=parseInt(e.target.style.top);console.log(lx,ly);}
+			t[i].onmouseup = function(){ d = false;}
+			window.onmousemove = function(e){ 
+				if(d){ target.style.left = (lx + e.clientX - cx) + "px"; target.style.top = (ly + e.clientY - cy) + "px";}
+			}
+		}
+	})();
+    </script>
+	</section>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>02 - {온}점</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon2.ico">
+	<style type="text/css">
+		body, html, div, section, footer{margin: 0; }
+		body{margin: 0;
+				-ms-overflow-style: none;
+			cursor: url(cursor2.cur), auto;
+			overflow: hidden;}
+		::-webkit-scrollbar {display: none; }
+		nav{font-family: 'Kumbh Sans', sans-serif;
+			font-size: 1.5em;
+			font-weight: 400;
+			word-spacing: -1px;
+			line-height: -30px;
+			letter-spacing: -1px;
+			z-index: 35;background:none; width: 10px;
+			height: 10px; }
+		nav .ml{margin-left: 10px;}
+		.ml{margin-left: 20px;}
+  		/*.cursor{background: url(topic1icon.png);
+      			width: 3rem;
+      			height: 3rem;
+      			position: absolute;
+      			z-index: 1000;
+      			transform: translate(-50%, -50%);
+      			pointer-events: none;
+      			transition: all 0.3s ease;
+      			transition-property: background, transform;
+      			transform-origin: 100% 100%;
+      			background-size: cover;}*/
+		section{width: 100vw; height: 100vh; background: #E6E6E6;}
+		img{display: block;width: 100%;}
+		@font-face{font-family: "SMtae-R";
+					src:local(※), url(SMtae-R.otf)format("opentype");}
+		@font-face{font-family: "SDNeoR";
+					src:local(※), url(SDNeoR.ttf)format("truetype");}
+		@font-face{font-family: "SDNeoUL";
+					src:local(※), url(fSDNeoUL.ttf)format("truetype");}
+		@font-face{font-family: "SDNeoB";
+					src:local(※), url(SDNeoB.ttf)format("truetype");}
+		.grid{display: grid;
+				grid-template-rows: 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh 12.5vh;
+				grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+				grid-gap: 0px 30px;}
+		a{grid-area: 1 / 1 / 3 / 3 ;
+			display: inline-block;
+			width: 40px; height: 40px;
+			margin-top: 30px;
+			background: #E8389D;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			border-radius: 20px;
+			z-index: 100;
+			animation: scale 3s infinite linear;}
+
+		@keyframes scale {
+  		0%   { transform: scale(1); }
+  		50% { transform: scale(1.3); }
+  		100% { transform: scale(1); }}
+
+  		a:hover{background:black;
+            transition: all 0.2s;}
+		
+		/*#back{grid-area: 1 / 1 / 3 / 3 ;
+			display: inline-block;
+			width: 40px; height: 40px;
+			margin-top: 30px;opacity: 0; color: black; text-decoration: none;}
+		#back:hover{opacity: 1; color: black;
+			left:20px; transition: all 0.3s;}*/
+
+
+		.absolute{display: block;position: absolute;}
+		.a{grid-area: 1 / 1 / 9 / 1 ; background:#E8389D;z-index:30;
+			}
+		.b{grid-area: 1 / 7 / 9 / 12 ; background:#E8389D;z-index:40;}
+		.ccc {display: flex;
+    			position: absolute;
+    			top: 0;
+    			left: 0;
+    			align-items: left;
+    			background: none;
+    			justify-content: flex-start;
+    			width: 100%;
+    			height: 100%;
+    			white-space: nowrap;
+    			overflow: hidden;
+    			transform: rotate(-90deg) scale(2);
+    			transition: all 1s ease;}
+    	.cccard{font-family: 'Kumbh Sans', sans-serif;
+			font-size: 1em;
+			font-weight: 300;
+			word-spacing: -1px;
+			letter-spacing: 0px;
+			z-index: 35;
+			}
+    	.ccc div {display: flex;
+     			 animation: scrollText 10s infinite linear;}
+     	@keyframes scrollText {
+  from   { transform: translateX(0%); }
+  to { transform: translateX(-115%); }
+}
+		/*.pl{position: relative; overflow: hidden;}
+		section .scroll{width: 100%; display: flex;}
+		section .scroll div{background: none;
+							font-family: 'Kumbh Sans', sans-serif;
+							font-size: 2em;
+							font-weight: 300;
+							word-spacing: -2px;
+							letter-spacing: -1px;
+							white-space: nowrap;
+							text-transform: uppercase;
+							z-index: 35;
+							animation: animate 40s linear infinite;
+								animation-delay: -40s;}
+		section .scroll div:nth-child(2)
+							{animation: animate2 40s linear infinite;
+							animation-delay: -20s;}
+		section .scroll div span{margin-right: 20px;}
+		section .scroll.text1{transform: rotate(-90deg);}
+		@keyframes animate{0% {transform: translateX(100%);}
+							100% {transform: translateX(-100%);}}
+		@keyframes animate2{0% {transform: translateX(0%);}
+							100% {transform: translateX(-200%);}}*/
+
+		.topic{grid-area: 1 / 3 / 4 / 7 ;
+				font-family: 'SMtae-R';
+			font-size: 7.5em;
+			text-align: right;
+			padding-top:20px;
+			z-index:50;}
+		.ocard{background: none;
+			font-family: 'Kumbh Sans', sans-serif;
+			transform: rotate(180deg);
+			writing-mode: vertical-rl;
+			font-size: 2em;
+			font-weight: 300;
+			word-spacing: -2px;
+			letter-spacing: -1px;
+			z-index: 35;
+			display: block;
+			white-space: nowrap;
+  			overflow: hidden;}
+  		.deg{transform: rotate(-90deg);
+  			height: 30px;
+  			display: block;}
+  		.card{font-family: 'Kumbh Sans', sans-serif;
+			font-size: 2em;
+			font-weight: 300;
+			word-spacing: -2px;
+			letter-spacing: -1px;
+			z-index: 35;}
+		.span{margin-left: 20px;}
+		.frontdef{font-family: 'SDNeoB';
+					font-size: 1.2em;}
+		.def{grid-area: 5 / 2 / 8 / 6 ;
+			font-family: 'SDNeoR';
+			font-size: 1.1em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 180%;
+			padding-top:0px;
+			z-index:50;}
+		/*.target { display: inline-block;
+					white-space: nowrap;
+					overflow: hidden;}*/
+		.small1 { width: 600px;}
+		.small2 { width: 300px;}
+		.small3 { width: 650px;}
+		.topic1circle{grid-area: 1 / 3 / 6 / 7;
+						z-index:0;}
+		.topic1line{grid-area: 5 / 1 / 9 / 5;
+					padding-left:50px;
+					padding-top:55px;
+					z-index:1;}
+		.topic1hott{grid-area: 2 / 7 / 6 / 12;
+					margin: 0px auto;
+					z-index:60;
+				-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no1{grid-area: 1 / 7 / 3 / 10;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top:40px;
+			padding-left: 40px;
+			padding-right: 120px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no2{grid-area: 3 / 8 / 5 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top:35px;
+			padding-left: 70px;
+			padding-right: 0px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no3{grid-area: 5 / 7 / 7 / 10;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top:25px;
+			padding-left: 60px;
+			padding-right: 30px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no4{grid-area: 6 / 9 / 8 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 25px;
+			padding-left: 110px;
+			padding-right: 30px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no5{grid-area: 7 / 10 / 9 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 10px;
+			padding-left: 90px;
+			padding-right:20px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no6{grid-area: 8 / 8 / 10 / 12;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 0px;
+			padding-left: 130px;
+			padding-right:20px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.no7{grid-area: 7 / 7 / 9 / 10;
+			font-family: 'SDNeoR';
+			font-size: 1.6em;
+			text-align: left;
+			word-break: keep-all;
+			line-height: 150%;
+			padding-top: 70px;
+			padding-left: 40px;
+			padding-right:10px;
+			z-index:65;
+		-webkit-touch-callout: none;
+        user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;}
+		.circle1{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle2{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle3{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle4{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle5{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle6{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle7{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle8{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle9{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		.circle10{width: 100px; height: 100px;
+				background: black;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				z-index: 70;}
+		#drag{cursor: move;}
+		/*.pointer{position: absolute;
+				top: 0; left: 0;
+				width: 120px; height: 80px;
+				margin: 0px auto;
+				background: url(topic1icon.png);
+				background-repeat: no-repeat;
+				transform: translate(-50%, -50%);
+				background-size: 45px;
+				background-position: center;
+				z-index: 1000}*/
+	</style>
+</head>
+<body>
+	<section class="grid">
+		<div class="a">
+			<div class="ccc cccard">
+				<div class="span">02 - GRAMMAR - {The Period/Full Stop}Point ; Mark The End of A Declarative Sentence&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				</div>
+				<div class="span">02 - GRAMMAR - {The Period/Full Stop}Point ; Mark The End of A Declarative Sentence&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				</div>
+				<div class="span">02 - GRAMMAR - {The Period/Full Stop}Point ; Mark The End of A Declarative Sentence&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				</div>
+			</div>
+		</div>
+		<nav>
+		<div class="grid">
+			<a href="index.html"></a>
+		</div>
+	</nav>
+		<div class="topic">{온}점</div>
+		<img src="topic2circle.png" class="topic1circle small1"></div>
+		<div class="def"><font class="frontdef">문장을 마칠 때 사용하는 문장 부호</font><br>
+				일반적으로 대부분 언어에서 마침표를 {온}점(.)으로 쓴다. 중국어, 일본어 등에서는 고리점(。)을 사용한다. 한국에서는 가로쓰기에는 {온}점(.)을 쓰고 세로쓰기에는 고리점(。)을 썼으나, 최근에는 가로쓰기가 대부분이라, 결국 2015년 1월 1일 한글 맞춤법 부록: 문장부호 규정에서  모점(、)과 함께 삭제되었다.</div>
+		<div class="b"></div>
+		<img src="topic2hott.png" class="topic1hott small3"></div>
+		<div class="no1">1. 2015년 1월 1월부터 {&nbsp&nbsp&nbsp}점 대신 ‘마침표’가 바른 명칭이 되었다.</div>
+		<div class="no2">2. 한국·중국·일본 중에서 한국만 공식적으로 서양식 {&nbsp&nbsp&nbsp}점을 사용하고 있다. 중국과 일본은 고리점(。)을 사용한다.</div>
+		<div class="no3">3. {&nbsp&nbsp&nbsp}점을 축약의 의미로 사용할 땐, 모든 축약 글자 뒤에 마침표를 찍거나 하나도 찍지 않아야 한다. 같이 연습해보자.</div>
+		<div class="no4">연습1. U.S.A{&nbsp&nbsp&nbsp}</div>
+		<div class="no5">연습2. W.H.O{&nbsp&nbsp&nbsp}</div>
+		<div class="no6">연습3. H.O.T{&nbsp&nbsp&nbsp}</div>
+		<div class="circle1 absolute drag" style="top: 50px; left: 980px;"></div>
+		<div class="circle2 absolute drag" style="top: 110px; left: 1420px;"></div>
+		<div class="circle3 absolute drag" style="top: 160px; left: 1370px;"></div>
+		<div class="circle4 absolute drag" style="top: 220px; left: 1100px;"></div>
+		<div class="circle5 absolute drag" style="top: 300px; left: 1230px;"></div>
+		<div class="circle6 absolute drag" style="top: 390px; left: 900px;"></div>
+		<div class="circle7 absolute drag" style="top: 450px; left: 1360px;"></div>
+		<div class="circle8 absolute drag" style="top: 570px; left: 1330px;"></div>
+		<div class="circle9 absolute drag" style="top: 440px; left: 1020px;"></div>
+		<div class="circle10 absolute drag" style="top: 590px; left: 1110px;"></div>
+		<div class="pointer"></div>
+		<script>
+        const pointer = document.querySelector(".pointer");
+
+        document.addEventListener("mousemove", (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            pointer.style.left = mouseX + 'px';
+            pointer.style.top = mouseY + 'px';
+        });
+        document.addEventListener("mousemove", (e) => {
+    console.log(e.clientX);
+    console.log(e.clientY);
+});
+</script>
+
+<script type="text/javascript">
+        (function(){
+		var d = false;
+		var target,cx,cy,lx,ly;
+		var t = document.getElementsByClassName("drag");
+		for(var i=0; i<t.length; i++){
+			t[i].style.display = "block";
+			t[i].style.position = "absolute";
+			t[i].style.cursor = "pointer";
+			t[i].ondragstart = function(e){e.preventDefault();};
+			t[i].onmousedown = function(e){ d = true; target = e.target;
+				cx = e.clientX; cy = e.clientY;
+				lx=parseInt(e.target.style.left);
+				ly=parseInt(e.target.style.top);console.log(lx,ly);}
+			t[i].onmouseup = function(){ d = false;}
+			window.onmousemove = function(e){ 
+				if(d){ target.style.left = (lx + e.clientX - cx) + "px"; target.style.top = (ly + e.clientY - cy) + "px";}
+			}
+		}
+	})();
+    </script>
+	</section>
+</body>
+</html>
